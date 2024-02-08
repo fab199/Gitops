@@ -125,3 +125,9 @@ Now, I will create another workflow, which will be in the second repository whic
    - Ensure successful completion of the workflow, verifying logs and analysis results.
 
 `By following these steps, the SonarCloud integration for code analysis is set up within the GitHub repository, allowing for automated testing, analysis, and quality gate checks`
+<br/>
+The second work flow
+<br/>
+<br/>
+<img src="https://i.imgur.com/gPfJA0O.png" height="80%" width="80%" alt="2nd workflow"/>
+<br />
