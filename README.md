@@ -52,5 +52,9 @@ These steps ensure that sensitive information such as access keys and resource i
 <br/>
 <img src="https://i.imgur.com/Ub9ziyv.png" height="80%" width="80%" alt="staging"/>
 <br />
+The terraform code.
 
+<br/>
+<img src="https://i.imgur.com/fyHL700.png" height="80%" width="80%" alt="staging"/>
+<br />
 
