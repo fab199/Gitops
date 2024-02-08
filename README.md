@@ -64,7 +64,7 @@ Vpf.tf
 <h2>Creating staging workflow for terraform:</h2>
 Here i wrote workflow, workflow is the same thing as pipeline for jenkins. Its called workflow for github actions, instead of doing it manually, I wrote the code which will be pushed and the workflow will be automatically created.
 <br/>
-<img src="https://i.imgur.com/lr6bYm2.png" height="80%" width="80%" alt="workflow"/>
+<img src="https://i.imgur.com/36P8tRD.png" height="80%" width="80%" alt="workflow"/>
 <br />
 The test flow was successful with the github actions after series of troubleshooting
 <br/>
