@@ -52,9 +52,21 @@ These steps ensure that sensitive information such as access keys and resource i
 <br/>
 <img src="https://i.imgur.com/Ub9ziyv.png" height="80%" width="80%" alt="staging"/>
 <br />
-The terraform code.
+The terraform file.
 
 <br/>
-<img src="https://i.imgur.com/fyHL700.png" height="80%" width="80%" alt="staging"/>
+<img src="https://i.imgur.com/fyHL700.png" height="80%" width="80%" alt="terraform"/>
 <br />
-
+Vpf.tf
+<br/>
+<img src="https://i.imgur.com/5huRIrc.png" height="80%" width="80%" alt="vpf.tf"/>
+<br />
+<h2>Creating staging workflow for terraform:</h2>
+Here i wrote workflow, workflow is the same thing as pipeline for jenkins. Its called workflow for github actions, instead of doing it manually, I wrote the code which will be pushed and the workflow will be automatically created.
+<br/>
+<img src="https://i.imgur.com/lr6bYm2.png" height="80%" width="80%" alt="workflow"/>
+<br />
+The test flow was successful with the github actions after series of troubleshooting
+<br/>
+<img src="https://i.imgur.com/F3wZxrr.png" height="80%" width="80%" alt="workflow"/>
+<br />
