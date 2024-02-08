@@ -70,3 +70,18 @@ The test flow was successful with the github actions after series of troubleshoo
 <br/>
 <img src="https://i.imgur.com/F3wZxrr.png" height="80%" width="80%" alt="workflow"/>
 <br />
+the steps that was executed
+<br/>
+<img src="https://i.imgur.com/xzWa5DR.png" height="80%" width="80%" alt="workflow"/>
+<br />
+
+<h2>I added steps to the workflow to apply Terraform changes only if there are changes on the main branch.</h2>
+<br/>
+<img src="https://i.imgur.com/72Qo8zp.png" height="80%" width="80%" alt="workflow"/>
+<br />
+Terraform Apply step is added to the workflow, configured to run terraform apply -auto-approve only if there are changes on the main branch.
+Additional steps are added to install the Nginx Ingress Controller on the Kubernetes cluster for deploying the application.
+Steps are conditionally executed based on the success of previous steps, ensuring that only successful Terraform applies trigger the installation of the Ingress Controller.
+The process of merging changes from the staging branch to the main branch is explained using Git commands.
+The concept of branch protection rules and pull requests is briefly mentioned for real-time collaboration and code review.
+The completion of the workflow successfully applying the Terraform changes and setting up the EKS cluster is confirmed through Management Console
