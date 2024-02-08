@@ -76,10 +76,10 @@ the steps that was executed
 <br />
 
 <h2>I added steps to the workflow to apply Terraform changes only if there are changes on the main branch.</h2>
+Terraform Apply step is added to the workflow, configured to run terraform apply -auto-approve only if there are changes on the main branch.
 <br/>
 <img src="https://i.imgur.com/72Qo8zp.png" height="80%" width="80%" alt="workflow"/>
 <br />
-Terraform Apply step is added to the workflow, configured to run terraform apply -auto-approve only if there are changes on the main branch.
 Additional steps are added to install the Nginx Ingress Controller on the Kubernetes cluster for deploying the application.
 Steps are conditionally executed based on the success of previous steps, ensuring that only successful Terraform applies trigger the installation of the Ingress Controller.
 The process of merging changes from the staging branch to the main branch is explained using Git commands.
