@@ -30,6 +30,8 @@ The GitOps involves two Git repositories - one for Terraform code (infrastructur
 
 <h2>NOTE:</h2> The project architecture involves two repositories and two workflows. One workflow applies infrastructure changes (Terraform), and the other applies application changes (Maven, Docker, Helm Charts).
 
+
+<h2>Steps for Setup:</h2>
 Fork the 2 repositories with the source code, Do the SSH key exchange from the computer to the github account and clone the repositories
 <br/>
 <img src="https://i.imgur.com/kR7zPpo.png" height="80%" width="80%" alt="clone the repositories"/>
