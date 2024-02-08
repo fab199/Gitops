@@ -29,3 +29,8 @@ The GitOps involves two Git repositories - one for Terraform code (infrastructur
    - Executes Helm Charts on an EKS cluster, where Kubernetes detects changes in the image tag, fetches the image from ECR, and runs the application.
 
 <h2>NOTE:</h2> The project architecture involves two repositories and two workflows. One workflow applies infrastructure changes (Terraform), and the other applies application changes (Maven, Docker, Helm Charts).
+
+Fork the 2 repositories with the source code, Do the SSH key exchange from the computer to the github account and clone the repositories
+<br/>
+<img src="https://i.imgur.com/kR7zPpo.png" height="80%" width="80%" alt="clone the repositories"/>
+<br />
