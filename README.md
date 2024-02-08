@@ -92,7 +92,11 @@ The completion of the workflow successfully applying the Terraform changes and s
 So the EKS cluster is created successfully, the Kubernetes cluster is up and running ready to be used.
 Now, I will create another workflow, which will be in the second repository which is the application repository, there's a separate Git repository for application code, so the workflow is going to fetch the code, test the code by using Maven Checkstyle and Sonar analysis, then build the Docker image, upload it to Amazon ECR, then I will build the Helm charts, which when deployed is going to fetch the latest image from ECR and run the application.
 `But first I will be going SonarCloud to create an organization, project and token, and store it on GitHub Secrets`
+
+<br/>
 <h2>Steps for that</h2>
+<br />
+
 1. Create SonarCloud Organization and Project: Log into SonarCloud and create a new organization, Manually create a new organization with a unique name, Create a new project within the organization
 2. Generate Token for Authentication: Generate a token on SonarCloud for authentication purposes.
 3. Store Secrets on GitHub:
