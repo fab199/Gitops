@@ -36,3 +36,7 @@ Fork the 2 repositories with the source code, Do the SSH key exchange from the c
 <br/>
 <img src="https://i.imgur.com/kR7zPpo.png" height="80%" width="80%" alt="clone the repositories"/>
 <br />
+Making the code changes in the stage branch, If it works perfectly then it will be merged with the main branch
+<br/>
+<img src="https://i.imgur.com/rsBMgge.png" height="80%" width="80%" alt="staging"/>
+<br />
