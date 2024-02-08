@@ -40,3 +40,17 @@ Making the code changes in the stage branch, If it works perfectly then it will 
 <br/>
 <img src="https://i.imgur.com/rsBMgge.png" height="80%" width="80%" alt="staging"/>
 <br />
+
+<h2>Creating Github Secrets:</h2>
+
+Opened the Secrets section for the 2 GitHub repositories.
+Created an IAM User
+Created an S3 Bucket with a unique name, Copy the bucket name, Store the bucket name in GitHub Secrets of the repository with the name BUCKET_TF_STATE.
+Created an ECR Repository, Copy the repository URI, Store the repository URI in GitHub Secrets of the repository with the name REGISTRY.
+GitHub Secrets Configuration: For each repository, add secrets with specific names, in each of the repositories, add the secret keys
+These steps ensure that sensitive information such as access keys and resource identifiers are securely stored in GitHub Secrets, minimizing the risk of accidental exposure and potential security breaches.
+<br/>
+<img src="https://i.imgur.com/Ub9ziyv.png" height="80%" width="80%" alt="staging"/>
+<br />
+
+
