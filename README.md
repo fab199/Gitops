@@ -85,3 +85,39 @@ Steps are conditionally executed based on the success of previous steps, ensurin
 The process of merging changes from the staging branch to the main branch is explained using Git commands.
 The concept of branch protection rules and pull requests is briefly mentioned for real-time collaboration and code review.
 The completion of the workflow successfully applying the Terraform changes and setting up the EKS cluster is confirmed through Management Console
+
+`The workflow ensures that changes to infrastructure are applied only after thorough testing on the staging branch and approval via pull request on the main branch, maintaining control and reliability in infrastructure management`
+
+<h2>workflow for the application code</h2>
+So the EKS cluster is created successfully, the Kubernetes cluster is up and running ready to be used.
+Now, I will create another workflow, which will be in the second repository which is the application repository, there's a separate Git repository for application code, so the workflow is going to fetch the code, test the code by using Maven Checkstyle and Sonar analysis, then build the Docker image, upload it to Amazon ECR, then I will build the Helm charts, which when deployed is going to fetch the latest image from ECR and run the application.
+`But first I will be going SonarCloud to create an organization, project and token, and store it on GitHub Secrets`
+<h2>Steps for that</h2>
+1. Create SonarCloud Organization and Project: Log into SonarCloud and create a new organization, Manually create a new organization with a unique name, Create a new project within the organization
+2. Generate Token for Authentication: Generate a token on SonarCloud for authentication purposes.
+3. Store Secrets on GitHub:
+    - Add repository secrets for:
+    - SONAR_TOKEN: The token generated from SonarCloud.
+    - SONAR_ORGANIZATION: The name of the SonarCloud organization.
+    - SONAR_PROJECT_KEY: The key of the project created on SonarCloud.
+4. Review Code and Configuration:Review the source code of the application, including Dockerfile and Kubernetes definitions. Ensure that necessary configurations like Docker image names, Kubernetes deployment files, and Ingress rules are in place.
+5. Create Workflow File:Define the workflow including, and Trigger events.
+6. Testing Job: Set up a job to test the code using Maven.Fetch the code, run Maven tests, and check style.
+7. SonarCloud Analysis:
+   - Set up a job to run the SonarScanner CLI for code analysis.
+   - Specify Java version (Java 11) using `actions/setup-java`.
+   - Use SonarScanner CLI to scan the code, passing necessary parameters such as URL, authentication token, organization name, and project key.
+   - Upload analysis results to SonarCloud.
+8. Quality Gate Check:
+   - Integrate a quality gate check using an action from the GitHub Marketplace.
+   - Specify authentication token and URL for SonarCloud.
+   - Define conditions for passing the quality gate based on predefined rules (e.g., number of bugs).
+9. Execution and Error Handling:
+   - Run the workflow on GitHub Actions.
+   - Handle errors encountered during the execution, such as SonarQube server unreachable or failing quality gate checks.
+   - Address errors by updating configurations or creating new quality gates on SonarCloud.
+10.Final Execution:
+   - Rerun the workflow after addressing errors.
+   - Ensure successful completion of the workflow, verifying logs and analysis results.
+
+`By following these steps, the SonarCloud integration for code analysis is set up within the GitHub repository, allowing for automated testing, analysis, and quality gate checks`
