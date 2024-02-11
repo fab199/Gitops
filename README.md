@@ -131,3 +131,46 @@ The second work flow
 <br/>
 <img src="https://i.imgur.com/gPfJA0O.png" height="80%" width="80%" alt="2nd workflow"/>
 <br />
+<h2>Docker Build</h2>
+Build the docker image and upload it to ECR, For this I created another job in the workflow file. This is one job with all the steps. I named this job as Build and Upload
+<br/>
+<img src="https://i.imgur.com/8axEJ4j.png" height="80%" width="80%" alt="2nd workflow"/>
+<br />
+<h2>Got it tested:</h2>
+So i commit,push and run the workflow on github. it completed successfully, the image was built and uploaded to ECR.
+Here on ECR, you can see the image with the build ID. so every time there is a code change, the code will be tested and a new image will be generated
+<br/>
+<img src="https://i.imgur.com/EzgAgOY.png" height="80%" width="80%" alt="ECR"/>
+<br />
+
+<h2>Built Helm charts from the Kubernetes definition files and deployed it on the Kubernetes cluster</h2>
+Helm chart is where I kept all the definition files and then mention the variables in helm charts.
+
+<br/>
+<img src="https://i.imgur.com/YKkf07I.png" height="80%" width="80%" alt="Helm chart"/>
+<br />
+
+<h2>Ingress</h2>
+I created an ingress `vproingress.yaml` the URL on the browser is `vprofile.thehk.com` then it is going to route to a service with the name my-app on the port 8080 which is the service, And this service is going to route the request to any pod that has this selector `app: vpro-app` The pods will be created by this deployment. which can be accessed by this service, it is a service of type ClusterIP, internal access only. Front-end port 8080, target port 8080. I'm exposing the ports through the ingress. So once i access it through the URL then it is going to route it to the service.
+
+<br/>
+<img src="https://i.imgur.com/La5b9yG.png" height="80%" width="80%" alt="Helm chart"/>
+<br />
+
+<h2>Domain CNA record</h2>
+I went to the domain and added a CNA record to point it to the load balancer of the ingress controller. I copied the DNS name of the load balancer that was created by the Nginx ingress controller. Then add it to a record on the domain. I used GoDaddy. So if I access through the URL, it will route it to the service.
+
+<br/>
+<img src="https://i.imgur.com/p1mLKVA.png" height="80%" width="80%" alt="Helm chart"/>
+<br />
+
+<h2>Accessed the application through the browser using the URL and also logged in</h2>
+<br/>
+<img src="https://i.imgur.com/Wj0XtVb.png" height="80%" width="80%" alt="browser"/>
+<br />
+
+<br/>
+<img src="https://i.imgur.com/DvvPLpJ.png" height="80%" width="80%" alt="Login"/>
+<br />
+
+
