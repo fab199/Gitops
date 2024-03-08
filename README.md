@@ -1,5 +1,7 @@
 <h2>Project Architecture.</h2>
 
+`Using git which is a version control system to build, test and deploy code. (GITHUB ACTIONS)`
+
 <br/>
 <img src="https://i.imgur.com/W2picNj.png" height="80%" width="80%" alt="the project architecture"/>
 <br />
