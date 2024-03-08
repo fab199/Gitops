@@ -10,7 +10,7 @@
 The GitOps involves two Git repositories - one for Terraform code (infrastructure) and another for application code. Each repository has its own GitHub workflow to detect and apply changes.
 
 1. Setting Up Repositories and Workflows:
-   - Fork two Git repositories (Terraform and application).
+   - Two Git repositories (Terraform and application).
    - Set up SSH authentication with Git repositories.
    - Use Visual Studio Code to write workflows.
 
